@@ -11,46 +11,28 @@
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
-
+	
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-
+	<script src="app/angular-local-storage.min.js"></script>
+	<script src="app/loading-bar.min.js"></script>
+    <script src="app/underscore.js"></script>
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
-
-    <!-- your app's js -->
-    <script src="js/angular-local-storage.min.js"></script>
-    <script src="js/loading-bar.min.js"></script>
-    <script type="text/javascript" src="js/moment.min.js"></script>
-    <script type="text/javascript" src="js/underscore.min.js"></script>
-    <!--Application-->
-        <script src="app/app.js"></script>
-        
-
-        <script src="app/directives/truncateFilter.js"></script>
-
-        <script src="app/services/authInterceptorService.js"></script>
-        <script src="app/services/AuthService.js"></script>
-        <script src="app/services/toakensManagementService.js"></script>
-        <script src="app/services/roadTripService.js"></script>
-        <script src="app/services/expenseService.js"></script>
-
-        <script src="app/controllers/homeController.js"></script>
-        <script src="app/controllers/signupcontroller.js"></script>
-        <script src="app/controllers/loginController.js"></script>
-        <script src="app/controllers/indexController.js"></script>
-        <script src="app/controllers/refreshController.js"></script>
-        <script src="app/controllers/tokensManagementController.js"></script>
-        <script src="app/controllers/associateController.js"></script>
-        <script src="app/controllers/addNewRoadTripController.js"></script>
-        <script src="app/controllers/myRoadTripsController.js"></script>
-        <script src="app/controllers/roadTripDetailsController.js"></script>
-        <script src="app/controllers/roadTripExpensesContoller.js"></script>
-        <script src="app/controllers/roadTripAddExpenseController.js"></script>
-        <script src="app/controllers/addUserController.js"></script>
-        <script src="app/controllers/joinRoadTripController.js"></script>
+	
+    
+	<!-- your app's js -->
+    <script src="app/app.js"></script>
+	 <script src="app/controllers/signInController.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+	<script src="app/services/authInterceptorService.js"></script>
+	<script src="app/services/AuthService.js"></script>
+	<script src="app/services/toakensManagementService.js"></script>
+	<script src="app/services/roadTripService.js"></script>
+	<script src="app/services/expenseService.js"></script>
   </head>
-  <body ng-app="RoadTripApp" animation="slide-left-right-ios7">
+  <body ng-app="starter" animation="slide-left-right-ios7">
     <!-- 
       The nav bar that will be updated as we navigate between views.
     -->
@@ -65,5 +47,15 @@
       have templates inline in this html file if you'd like).
     -->
     <ion-nav-view></ion-nav-view>
+	
+	<script id="app/view/sign-in-a.html" type="text/ng-template">
+		<ion-view title="Sign-In">
+		<ion-content>
+			<div class="paddnig">
+				<button class="button button-block-button-positive" type="button" data-ng-click="authExternalProvider('Facebook')"> Connect with Facebook</button>
+			</div>
+		</ion-content>
+	</ion-view>
+	</script>
   </body>
 </html>

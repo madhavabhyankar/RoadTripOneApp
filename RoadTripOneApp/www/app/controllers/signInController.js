@@ -1,5 +1,5 @@
-﻿'use strict';
-app.controller('homeController', [
+'use strict';
+app.controller('signInCtrl', [
     '$scope', '$location', '$timeout', 'authService', 'ngAuthSettings',
     function ($scope, $location, $timeout, authService, ngAuthSettings) {
 

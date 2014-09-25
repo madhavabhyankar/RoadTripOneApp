@@ -1,7 +1,7 @@
 {
-  "name": "roadtriponeapp",
+  "name": "firsttabsapp",
   "version": "1.0.0",
-  "description": "RoadTripOneApp: An Ionic project",
+  "description": "FirstTabsApp: An Ionic project",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^0.7.1",
